@@ -45,19 +45,23 @@ function AssessmentPage() {
   const [finishing, setFinishing] = useState(false);
 
   const question = useMemo(() => nextQuestion(state), [state]);
+  const [submittedQuestion, setSubmittedQuestion] = useState<typeof question>(null);
   const answered = state.responses.length;
   const progress = Math.round((answered / TOTAL_QUESTIONS) * 100);
   const lastResponse = state.responses[state.responses.length - 1];
   const probing = state.probeQueue.length > 0;
+  const displayedQuestion = revealed ? submittedQuestion : question;
 
   function submit() {
     if (selected === null || !question) return;
+    setSubmittedQuestion(question);
     setState((s) => applyAnswer(s, question, selected));
     setRevealed(true);
   }
 
   function advance() {
     setSelected(null);
+    setSubmittedQuestion(null);
     setRevealed(false);
   }
 
@@ -69,7 +73,7 @@ function AssessmentPage() {
     navigate({ to: "/results" });
   }
 
-  const done = !question || answered >= TOTAL_QUESTIONS;
+  const done = !revealed && (!question || answered >= TOTAL_QUESTIONS);
 
   if (!started) {
     return (
@@ -100,7 +104,7 @@ function AssessmentPage() {
                   </div>
                 ))}
               </div>
-              
+
               <button
                 onClick={() => setStarted(true)}
                 className="w-fit rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -121,7 +125,6 @@ function AssessmentPage() {
         title="Prerequisite diagnostic"
         description={`${career.title} track. Difficulty adapts to each answer, and a wrong answer queues the prerequisite concepts behind it.`}
       />
-      
 
       <div className="mb-6 flex flex-wrap items-center gap-3">
         <div className="min-w-[200px] flex-1">
@@ -154,27 +157,29 @@ function AssessmentPage() {
                 {finishing ? "Analysing responses…" : "See results"}
               </button>
             </div>
-          ) : question ? (
+          ) : displayedQuestion ? (
             <div>
               <div className="mb-4 flex flex-wrap items-center gap-2">
-                <Pill tone="primary">{question.skill}</Pill>
-                <Pill>{getNode(career, question.nodeId)?.label ?? question.nodeId}</Pill>
+                <Pill tone="primary">{displayedQuestion.skill}</Pill>
+                <Pill>
+                  {getNode(career, displayedQuestion.nodeId)?.label ?? displayedQuestion.nodeId}
+                </Pill>
                 <Pill
                   tone={
-                    question.difficulty === 3
+                    displayedQuestion.difficulty === 3
                       ? "weak"
-                      : question.difficulty === 2
+                      : displayedQuestion.difficulty === 2
                         ? "partial"
                         : "muted"
                   }
                 >
-                  {DIFFICULTY_LABEL[question.difficulty]}
+                  {DIFFICULTY_LABEL[displayedQuestion.difficulty]}
                 </Pill>
               </div>
-              <h3 className="text-lg font-medium leading-snug">{question.prompt}</h3>
+              <h3 className="text-lg font-medium leading-snug">{displayedQuestion.prompt}</h3>
               <div className="mt-5 space-y-2">
-                {question.options.map((opt, i) => {
-                  const isCorrect = i === question.correctIndex;
+                {displayedQuestion.options.map((opt, i) => {
+                  const isCorrect = i === displayedQuestion.correctIndex;
                   const isPicked = i === selected;
                   const cls = revealed
                     ? isCorrect
@@ -204,7 +209,8 @@ function AssessmentPage() {
               {revealed ? (
                 <div className="mt-5 rounded-md border border-border bg-muted/50 p-4">
                   <p className="text-sm font-medium">
-                    {lastResponse?.correct ? "Correct" : "Not quite"} — {question.explanation}
+                    {lastResponse?.correct ? "Correct" : "Not quite"} —{" "}
+                    {displayedQuestion.explanation}
                   </p>
                   {!lastResponse?.correct && state.probeQueue.length ? (
                     <p className="mt-2 text-xs text-muted-foreground">
