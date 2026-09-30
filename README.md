@@ -1,216 +1,166 @@
-# CareerTwin AI
+# 🎯 CareerTwin AI
 
-## AI-Powered Career Readiness & Employability Platform
+### AI-Powered Career Readiness & Employability Platform
 
-> From career aspiration to prerequisite diagnosis, personalized learning, measurable progress, and job-aligned skill evidence.
+*From career aspiration to prerequisite diagnosis, personalized learning, measurable progress, and job-aligned skill evidence.*
 
-CareerTwin AI is an AI-assisted career readiness and employability platform designed to help learners understand their current capabilities, identify skill and prerequisite gaps, receive personalized learning recommendations, measure progress, and align their skills with real-world job requirements.
-
-Developed as a prototype for the **MPOnline Hackathon** under the theme:
-
-> **Innovate for Madhya Pradesh. Build for Viksit Bharat.**
+**Built for the MPOnline Hackathon — _Innovate for Madhya Pradesh. Build for Viksit Bharat._**
 
 ---
 
-## Overview
+## 📑 Table of Contents
 
-Career preparation is often fragmented across career guidance platforms, learning platforms, assessment tools, job portals, and resume builders.
+1. [Overview](#-overview)
+2. [Problem Statement](#-problem-statement)
+3. [Our Solution](#-our-solution)
+4. [Core Innovation: Prerequisite-Aware Diagnosis](#-core-innovation-prerequisite-aware-diagnosis)
+5. [How CareerTwin Works](#-how-careertwin-works)
+6. [Features](#-features)
+7. [Architecture](#-architecture)
+8. [AI + Deterministic Intelligence](#-ai--deterministic-intelligence)
+9. [Tech Stack](#-tech-stack)
+10. [Project Structure](#-project-structure)
+11. [Installation Guide](#-installation-guide)
+12. [Available Scripts](#-available-scripts)
+13. [Deployment](#-deployment)
+14. [Troubleshooting](#-troubleshooting)
+15. [Roadmap](#-roadmap)
+16. [Contributing](#-contributing)
+17. [Responsible Design & Limitations](#-responsible-design--limitations)
+18. [Acknowledgements](#-acknowledgements)
 
-A learner may know the career they want but still struggle to understand:
+---
+
+## 🌟 Overview
+
+Career preparation is usually fragmented across career-guidance sites, learning platforms, assessment tools, job portals, and resume builders. A learner may know **what** they want to become, yet still be unsure:
 
 - What skills are actually required?
-- Which skills do they already have?
-- Which prerequisite concepts are missing?
-- What should they learn first?
-- Which topics can they skip because they already demonstrate competency?
-- How do their skills align with a specific job?
-- How can they demonstrate the skills they have developed?
+- Which skills do I already have?
+- Which foundational concepts am I missing?
+- What should I learn first, and what can I safely skip?
+- How do my skills line up with a specific job?
+- How can I *show* the skills I've built?
 
-CareerTwin AI connects these stages into a continuous career-readiness workflow.
+**CareerTwin AI** connects all of these stages into one continuous, measurable workflow:
 
-The platform is built around four stages:
+```
+DIAGNOSE  →  DEVELOP  →  PROVE  →  UPDATE
+```
 
-**DIAGNOSE → DEVELOP → PROVE → UPDATE**
+| Stage | What happens |
+|-------|--------------|
+| **Diagnose** | Understand current capabilities, skills, and prerequisite gaps |
+| **Develop** | Generate a personalized learning path from the learner's current state |
+| **Prove** | Track assessments, learning progress, projects, and other evidence |
+| **Update** | Continuously refresh the learner's CareerTwin as new evidence arrives |
 
-- **Diagnose:** Understand current capabilities, skills, and prerequisite gaps.
-- **Develop:** Generate a personalized learning path based on the learner's current state.
-- **Prove:** Track assessments, learning progress, projects, and other evidence.
-- **Update:** Continuously update the learner's CareerTwin as new evidence becomes available.
-
-The goal is to transform career preparation from a generic learning journey into a measurable and personalized progression.
-
----
-
-## Problem Statement
-
-Students and early-career learners frequently face a gap between:
-
-> "I want to become this."
-
-and:
-
-> "I know exactly what I need to do next."
-
-Existing digital platforms can address individual parts of career preparation, but the overall journey can remain disconnected.
-
-A learner may have access to:
-
-- Career guidance
-- Online courses
-- Skill assessments
-- Job portals
-- Resume builders
-- Learning platforms
-
-However, these experiences may not share a common representation of the learner's evolving capabilities.
-
-As a result, learners may receive lists of skills or courses without clearly understanding:
-
-1. Their current capability level.
-2. The prerequisite concepts behind difficult skills.
-3. Which learning activity should come next.
-4. Whether learning has improved their capability.
-5. How their skills align with a particular job requirement.
-6. What evidence can demonstrate their progress.
-
-CareerTwin AI addresses this gap by connecting diagnosis, learning, validation, and job alignment into one continuous workflow.
+> 🔗 **Live demo:** <https://careertwinai.vercel.app/>
 
 ---
 
-## Our Solution
+## ❓ Problem Statement
 
-CareerTwin AI creates a dynamic **CareerTwin** for each learner.
+Students and early-career learners often sit in the gap between:
 
-The CareerTwin can represent:
+> *"I want to become this."*  and  *"I know exactly what I need to do next."*
 
-- Target Career
-- Required Skills
-- Prerequisite Relationships
-- Assessment Results
-- Skill Gaps
-- Learning Progress
-- Target Job Requirements
-- Skill Evidence
+Learners typically get lists of skills or courses, but no shared representation of their **evolving** capability. As a result they struggle to know:
 
-This creates a structured learner profile that evolves as the learner learns and demonstrates new capabilities.
+1. Their current capability level
+2. The prerequisite concepts behind difficult skills
+3. Which learning activity should come next
+4. Whether learning actually improved their capability
+5. How their skills align with a particular job requirement
+6. What evidence demonstrates their progress
 
-CareerTwin is designed around four practical questions:
-
-> **What do I know today?**
-
-> **What may be missing?**
-
-> **What should I learn next?**
-
-> **How can I demonstrate my progress?**
+CareerTwin AI closes this gap by linking **diagnosis → learning → validation → job alignment**.
 
 ---
 
-## Core Innovation
+## 💡 Our Solution
 
-### Prerequisite-Aware Career Readiness
+CareerTwin AI builds a dynamic **CareerTwin** for every learner — a structured profile that evolves as they learn and demonstrate new capabilities. It can represent:
 
-The central innovation of CareerTwin AI is the use of **prerequisite-aware diagnosis** within a career-readiness workflow.
+- 🎯 Target Career
+- 🧩 Required Skills
+- 🔗 Prerequisite Relationships
+- 📝 Assessment Results
+- 🕳️ Skill Gaps
+- 📈 Learning Progress
+- 💼 Target Job Requirements
+- 🗂️ Skill Evidence
 
-A conventional assessment may identify:
+The CareerTwin answers four practical questions:
 
-> "SQL is weak."
+> **What do I know today?** · **What may be missing?** · **What should I learn next?** · **How can I demonstrate my progress?**
 
-CareerTwin attempts to go one level deeper by examining relevant prerequisite concepts.
+---
 
-For example:
+## 🚀 Core Innovation: Prerequisite-Aware Diagnosis
 
-**Data Analyst → SQL → JOINs → Database Relationships → Primary Keys / Foreign Keys**
+A conventional assessment says: *"SQL is weak."*
 
-If a learner struggles with SQL JOIN-related questions, the system can inspect prerequisite concepts such as database relationships.
+CareerTwin goes one level deeper by examining the **prerequisite concepts** behind a skill:
 
-It may then surface:
+```
+Data Analyst → SQL → JOINs → Database Relationships → Primary Keys / Foreign Keys
+```
+
+If a learner struggles with SQL JOIN questions, the system inspects the prerequisite concepts and may surface:
 
 > **Potential Root Gap: Database Relationships**
 
-The learner can then be guided toward foundational concepts before continuing with more advanced SQL practice.
+The learner is then guided toward the foundation *before* continuing with advanced SQL practice.
 
-### Important Distinction
-
-CareerTwin uses the term **Potential Root Gap** intentionally.
-
-A prerequisite relationship represents a learning dependency modeled by the system. It does not establish scientifically proven causality for an individual learner.
+> ⚠️ **Why "Potential" Root Gap?**
+> A prerequisite relationship is a *modeled learning dependency*, not scientifically proven causality for an individual learner. The wording is intentional and honest.
 
 ---
 
-## How CareerTwin Works
+## 🔄 How CareerTwin Works
 
-The complete CareerTwin workflow is:
+```
+Career Goal
+    ↓
+Career & Skill Mapping
+    ↓
+Prerequisite Readiness Assessment
+    ↓
+Adaptive Assessment
+    ↓
+Skill & Prerequisite Analysis
+    ↓
+Potential Root Gap
+    ↓
+Personalized Curriculum
+    ↓
+Learning & Practice
+    ↓
+Reassessment
+    ↓
+Updated CareerTwin
+    ↓
+Target Job Skill Match
+    ↓
+Skill Passport
+```
 
-**Career Goal**
+This forms a **feedback loop** — assessment and learning evidence continuously update the learner's CareerTwin.
 
-↓
+The prototype implements one complete vertical slice:
 
-**Career & Skill Mapping**
-
-↓
-
-**Prerequisite Readiness Assessment**
-
-↓
-
-**Adaptive Assessment**
-
-↓
-
-**Skill & Prerequisite Analysis**
-
-↓
-
-**Potential Root Gap**
-
-↓
-
-**Personalized Curriculum**
-
-↓
-
-**Learning & Practice**
-
-↓
-
-**Reassessment**
-
-↓
-
-**Updated CareerTwin**
-
-↓
-
-**Target Job Skill Match**
-
-↓
-
-**Skill Passport**
-
-This creates a feedback loop in which assessment and learning evidence can continuously update the learner's CareerTwin.
+**Student Profile → Target Career → Prerequisite Assessment → Adaptive Questions → Skill & Prerequisite Map → Potential Root Gap → Personalized Curriculum → Reassessment → CareerTwin Dashboard → Target Job Match → Skill Passport**
 
 ---
 
-## Key Features
+## ✨ Features
 
-### 1. Career Goal Selection
+### 1. 🎯 Career Goal Selection
+The learner begins by choosing a target career (e.g., **Data Analyst**). The platform maps that career to its relevant skills and prerequisite concepts.
 
-The learner begins by selecting a target career.
-
-Example:
-
-**Target Career: Data Analyst**
-
-The platform maps the target career to relevant skills and prerequisite concepts.
-
----
-
-### 2. Prerequisite Readiness Assessment
-
-The platform assesses more than broad skill labels.
-
-Assessment questions can be associated with:
+### 2. 🧪 Prerequisite Readiness Assessment
+Assessment goes beyond broad skill labels. Each question can be tagged with:
 
 - Skill
 - Prerequisite
@@ -219,77 +169,57 @@ Assessment questions can be associated with:
 - Expected concept
 - Scoring information
 
-This enables the system to understand competency at multiple levels.
+This lets the system understand competency at **multiple levels** — not just "SQL", but the concepts underneath it.
 
----
+### 3. 🎚️ Adaptive Assessment
+The assessment path adjusts to learner performance:
 
-### 3. Adaptive Assessment
+- **Strong performance** → more advanced questions
+- **Weak performance** → prerequisite checks are triggered
+- **Weak prerequisites too** → foundational learning is recommended
 
-CareerTwin can adjust the assessment path based on learner performance.
+Core assessment behavior uses **structured, deterministic logic** so results are traceable.
 
-Strong performance can lead to more advanced questions.
+### 4. 🗺️ Skill & Prerequisite Map
+Relationships between career skills and foundational concepts are represented explicitly. Example for **Data Analyst**:
 
-Weak performance can trigger prerequisite checks.
+```
+Data Analyst
+├── SQL
+│   ├── SELECT
+│   ├── Filtering
+│   ├── Aggregation
+│   └── JOINs
+│       └── Database Relationships
+│           ├── Primary Keys
+│           └── Foreign Keys
+├── Excel
+├── Statistics
+└── Data Visualization
+```
 
-If prerequisite performance is also weak, the system can recommend foundational learning.
+### 5. 🔍 Potential Root Gap Detection
+When a learner struggles with an advanced concept, the system walks the prerequisite graph:
 
-The prototype uses structured and deterministic logic for core assessment behavior.
+```
+SQL JOIN difficulty → Prerequisite Analysis → Database Relationships → Potential Root Gap
+```
 
----
+It then recommends foundational learning before advanced practice.
 
-### 4. Skill and Prerequisite Map
+### 6. 📚 Personalized Curriculum
+The learning path is built from the learner's **current state**.
 
-CareerTwin represents relationships between career skills and foundational concepts.
+| Skill | Status |
+|-------|--------|
+| Python | Strong |
+| Excel | Moderate |
+| SQL | Developing |
+| Statistics | Moderate |
 
-Example:
+**Potential gap:** Database Relationships
 
-**Data Analyst**
-
-- SQL
-  - SELECT
-  - Filtering
-  - Aggregation
-  - JOINs
-    - Database Relationships
-      - Primary Keys
-      - Foreign Keys
-- Excel
-- Statistics
-- Data Visualization
-
-This allows learning recommendations to consider dependencies between concepts.
-
----
-
-### 5. Potential Root Gap Detection
-
-When a learner struggles with an advanced concept, the system can inspect relevant prerequisite concepts.
-
-Example:
-
-**SQL JOIN difficulty → Prerequisite Analysis → Database Relationships → Potential Root Gap**
-
-The system can then recommend foundational learning before advanced practice.
-
----
-
-### 6. Personalized Curriculum
-
-The learning path is based on the learner's current state.
-
-Example:
-
-- Python — Strong
-- Excel — Moderate
-- SQL — Developing
-- Statistics — Moderate
-
-Potential gap:
-
-**Database Relationships**
-
-Recommended sequence:
-
+**Recommended sequence:**
 1. Database Fundamentals
 2. Primary and Foreign Keys
 3. Database Relationships
@@ -297,58 +227,41 @@ Recommended sequence:
 5. SQL Practice
 6. Data Analysis Exercise
 
-Where competency has already been demonstrated, the system can recommend reducing unnecessary repetition.
+Where competency is already demonstrated, the system recommends **reducing unnecessary repetition**.
 
----
+### 7. 🔁 Reassessment & Progress Tracking
+Learning is always followed by reassessment:
 
-### 7. Reassessment and Progress
+```
+Initial Assessment → Learning → Practice → Reassessment → Updated Skill State → Updated Curriculum
+```
 
-Learning is followed by reassessment.
+This makes CareerTwin a **dynamic system**, not a one-time quiz.
 
-The learning loop is:
+### 8. 💼 Target Job Skill Matching
+Compare a target job description against the learner's current skill profile:
 
-**Initial Assessment → Learning → Practice → Reassessment → Updated Skill State → Updated Curriculum**
+```
+Job Description → Required Skills → Skill Extraction → Skill Normalization
+   → CareerTwin Skills → Potential Skill Gaps → Learning Actions
+```
 
-This makes the system dynamic rather than a one-time assessment tool.
+**Example**
 
----
+| Job Requires | CareerTwin Profile |
+|--------------|--------------------|
+| SQL | ✅ Demonstrated |
+| Excel | ✅ Demonstrated |
+| Power BI | 🟡 Developing |
+| Statistics | 🟡 Developing |
+| — | Python — Demonstrated |
 
-### 8. Target Job Skill Matching
+Identified gaps are connected directly to learning actions.
 
-CareerTwin can compare a target job description with the learner's current skill profile.
+> CareerTwin performs **skill alignment**. It does **not** predict or guarantee hiring outcomes.
 
-The process is:
-
-**Job Description → Required Skills → Skill Extraction → Skill Normalization → CareerTwin Skills → Potential Skill Gaps → Learning Actions**
-
-Example:
-
-**Target Job Requirements**
-
-- SQL
-- Excel
-- Power BI
-- Statistics
-
-**CareerTwin Profile**
-
-- SQL — Demonstrated
-- Excel — Demonstrated
-- Python — Demonstrated
-- Power BI — Developing
-- Statistics — Developing
-
-The identified skill gaps can then be connected to learning actions.
-
-> CareerTwin performs skill alignment. It does not predict or guarantee hiring outcomes.
-
----
-
-## CareerTwin Profile
-
-The CareerTwin is the central representation of the learner's evolving career-readiness state.
-
-It can contain:
+### 9. 🧬 CareerTwin Dashboard
+The central view of the learner's evolving career-readiness state:
 
 - Target Career
 - Current Skills
@@ -358,115 +271,46 @@ It can contain:
 - Target Job Alignment
 - Evidence
 
-Unlike a static resume, the CareerTwin is intended to evolve as the learner develops and demonstrates new capabilities.
+Unlike a static resume, it **evolves** as the learner grows.
+
+### 10. 🛂 Skill Passport
+An **evidence-oriented skill profile**. Instead of claiming *"I know SQL"*, the Skill Passport shows:
+
+```
+SQL
+Status:   Developing
+Evidence: • Diagnostic Assessment
+          • SQL Practice
+          • Learning Completion
+          • Project Evidence
+```
+
+Future versions can support richer evidence such as projects, practical exercises, and portfolio links.
+
+> The Skill Passport is **not** presented as an external certification.
 
 ---
 
-## Skill Passport
+## 🏗️ Architecture
 
-The Skill Passport is an **evidence-oriented skill profile**.
+CareerTwin AI follows a **modular hybrid architecture** so components can evolve independently.
 
-Instead of simply stating:
-
-> "I know SQL."
-
-the Skill Passport can represent:
-
-**SQL**
-
-**Status:** Developing
-
-**Evidence:**
-
-- Diagnostic Assessment
-- SQL Practice
-- Learning Completion
-- Project Evidence
-
-Future versions can support richer evidence such as:
-
-- Projects
-- Assessment results
-- Practical exercises
-- Learning completion
-- Portfolio links
-
-The Skill Passport is not presented as an external certification.
+| Layer | Responsibility |
+|-------|----------------|
+| **Presentation** | React + TypeScript + Vite, TanStack-based routing, reusable UI components |
+| **Application** | Assessment, Career Mapping, Curriculum, Job Matching, CareerTwin Dashboard, Skill Passport |
+| **Intelligence** | Deterministic assessment logic, structured skill relationships, curriculum rules, AI-assisted extraction/generation, personalization |
+| **Data** | Student profiles, skills, prerequisites, assessments, responses, progress, learning activities, job requirements, evidence, Skill Passport data *(structured demo data in the prototype; persistence in production)* |
 
 ---
 
-## Product Workflow
+## 🤖 AI + Deterministic Intelligence
 
-The prototype focuses on one complete vertical slice:
+CareerTwin deliberately avoids making every feature depend on AI.
 
-**Student Profile → Target Career → Prerequisite Assessment → Adaptive Questions → Skill & Prerequisite Map → Potential Root Gap → Personalized Curriculum → Reassessment → CareerTwin Dashboard → Target Job Match → Skill Passport**
+> **Design principle:** *AI should enhance the decision-support layer, not replace deterministic product logic.*
 
-The primary value comes from connecting these stages rather than treating them as independent features.
-
----
-
-## Architecture
-
-CareerTwin AI follows a modular hybrid architecture.
-
-### Presentation Layer
-
-The current prototype uses:
-
-- React
-- TypeScript
-- Vite
-- TanStack-based routing
-- Reusable UI components
-
-### Application Layer
-
-The major product capabilities include:
-
-- Assessment
-- Career Mapping
-- Curriculum
-- Job Matching
-- CareerTwin Dashboard
-- Skill Passport
-
-### Intelligence Layer
-
-The intelligence layer combines:
-
-- Deterministic assessment logic
-- Structured skill relationships
-- Curriculum rules
-- AI-assisted extraction
-- AI-assisted generation
-- Personalization
-
-### Data Layer
-
-A production implementation can persist:
-
-- Student Profiles
-- Skills
-- Prerequisites
-- Assessments
-- Responses
-- Progress
-- Learning Activities
-- Job Requirements
-- Evidence
-- Skill Passport Data
-
-The architecture is designed to remain modular so that individual components can evolve independently.
-
----
-
-## AI and Deterministic Intelligence
-
-CareerTwin deliberately avoids making every feature dependent on AI.
-
-### Deterministic Logic
-
-Used for:
+**Deterministic logic** (traceable, repeatable) handles:
 
 - Assessment scoring
 - Prerequisite relationships
@@ -476,9 +320,7 @@ Used for:
 - Curriculum ordering
 - Evidence tracking
 
-### AI-Assisted Functions
-
-Used where language understanding or personalization is useful:
+**AI-assisted functions** (where language understanding helps) handle:
 
 - Resume skill extraction
 - Job description parsing
@@ -487,53 +329,269 @@ Used where language understanding or personalization is useful:
 - Question generation
 - Recommendation refinement
 
-### Design Principle
-
-> **AI should enhance the decision-support layer, not replace deterministic product logic.**
-
-This approach makes the core product logic more traceable and allows deterministic fallback behavior when an external AI service is unavailable.
+This keeps core logic auditable and enables **deterministic fallback** whenever an external AI service is unavailable.
 
 ---
 
-## Technology Stack
+## 🧰 Tech Stack
 
-| Layer | Technology / Approach |
-|---|---|
-| Frontend | React |
-| Language | TypeScript |
-| Build Tool | Vite |
-| Routing | TanStack-based architecture |
-| UI | Reusable component system |
-| Assessment | Deterministic scoring logic |
+| Layer | Technology |
+|-------|------------|
+| Framework | [TanStack Start](https://tanstack.com/start) + [TanStack Router](https://tanstack.com/router) |
+| UI Library | [React 19](https://react.dev/) |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Build Tool | [Vite](https://vitejs.dev/) |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com/) + `tw-animate-css` |
+| Components | [Radix UI](https://www.radix-ui.com/) primitives, shadcn/ui-style components, `cmdk`, `vaul`, `sonner`, `embla-carousel` |
+| Data Fetching | [TanStack Query](https://tanstack.com/query) |
+| Forms & Validation | React Hook Form + [Zod](https://zod.dev/) |
+| Charts | [Recharts](https://recharts.org/) |
+| Icons | [Lucide React](https://lucide.dev/) |
+| Tooling | ESLint 9, Prettier, Bun |
+| Server Runtime | [Nitro](https://nitro.build/) |
+| Assessment Logic | Deterministic scoring |
 | Skill Mapping | Structured skill/prerequisite data |
 | Curriculum | Rule-based personalization |
 | AI | Selective AI assistance |
-| Data | Structured prototype/demo data |
-
-> The current repository is a Vite + React + TypeScript application with an existing TanStack-based architecture. The project is intended to be extended within this architecture rather than unnecessarily migrated to another framework.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
-The project is organized around product capabilities.
+```
+careertwin_ai/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # Reusable UI components
+│   ├── pages/              # Page-level views
+│   ├── routes/             # TanStack Router route definitions
+│   ├── features/
+│   │   ├── assessment/     # Prerequisite & adaptive assessment
+│   │   ├── career/         # Career & skill mapping
+│   │   ├── curriculum/     # Personalized learning paths
+│   │   ├── job-match/      # Target job skill matching
+│   │   ├── dashboard/      # CareerTwin dashboard
+│   │   └── passport/       # Skill Passport
+│   ├── lib/
+│   │   ├── assessment/     # Scoring & adaptive logic
+│   │   ├── career/         # Skill/prerequisite graph logic
+│   │   ├── curriculum/     # Curriculum rules
+│   │   └── ai/             # AI-assisted helpers
+│   ├── data/               # Structured demo data
+│   └── types/              # Shared TypeScript types
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── bun.lock
+├── bunfig.toml
+├── components.json         # shadcn/ui configuration
+├── eslint.config.js
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
 
-```text
-src/
-├── components/
-├── pages/
-├── routes/
-├── features/
-│   ├── assessment/
-│   ├── career/
-│   ├── curriculum/
-│   ├── job-match/
-│   ├── dashboard/
-│   └── passport/
-├── lib/
-│   ├── assessment/
-│   ├── career/
-│   ├── curriculum/
-│   └── ai/
-├── data/
-└── types/
+> The `src/` layout above describes the intended feature-based organization. Actual folder contents may vary slightly as the project evolves.
+
+---
+
+## 🛠️ Installation Guide
+
+### Prerequisites
+
+| Requirement | Version | Notes |
+|-------------|---------|-------|
+| **Node.js** | v20.19+ (v22 LTS recommended) | Required by Vite 8 |
+| **Bun** | Latest | Recommended (repo ships a `bun.lock`) |
+| **npm / pnpm / yarn** | Any recent | Alternative to Bun |
+| **Git** | Any recent | To clone the repository |
+
+Check your versions:
+
+```bash
+node -v
+bun -v      # optional if using npm
+git --version
+```
+
+### Step 1 — Clone the repository
+
+```bash
+git clone https://github.com/Isg-23/careertwin_ai.git
+cd careertwin_ai
+```
+
+### Step 2 — Install dependencies
+
+**Using Bun (recommended):**
+
+```bash
+bun install
+```
+
+**Using npm (alternative):**
+
+```bash
+npm install
+```
+
+<details>
+<summary>Don't have Bun? Install it here</summary>
+
+```bash
+# macOS / Linux
+curl -fsSL https://bun.sh/install | bash
+
+# Windows (PowerShell)
+powershell -c "irm bun.sh/install.ps1 | iex"
+
+# Or via npm
+npm install -g bun
+```
+
+</details>
+
+### Step 3 — (Optional) Configure environment variables
+
+The prototype is designed to run using **deterministic logic and structured demo data**, so no keys are required for the core flow.
+
+If you connect an external AI provider for the AI-assisted features (resume/job-description extraction, feedback, question generation), create a `.env` file in the project root:
+
+```bash
+cp .env.example .env   # if an example file exists, otherwise create .env manually
+```
+
+```env
+# Example only — use the variable names your AI integration expects
+AI_API_KEY=your_api_key_here
+```
+
+> 🔒 Never commit `.env` files or API keys. `.env` is already covered by `.gitignore` in most setups — verify before pushing.
+
+### Step 4 — Start the development server
+
+```bash
+bun run dev
+# or
+npm run dev
+```
+
+Open the local URL printed in your terminal (typically **http://localhost:3000** or **http://localhost:5173**).
+
+### Step 5 — Build for production
+
+```bash
+bun run build
+# or
+npm run build
+```
+
+### Step 6 — Preview the production build locally
+
+```bash
+bun run preview
+# or
+npm run preview
+```
+
+---
+
+## 📜 Available Scripts
+
+| Script | Command | Description |
+|--------|---------|-------------|
+| `dev` | `vite dev` | Start the development server with HMR |
+| `build` | `vite build` | Create an optimized production build |
+| `build:dev` | `vite build --mode development` | Build in development mode (unminified, easier debugging) |
+| `preview` | `vite preview` | Serve the production build locally |
+| `lint` | `eslint .` | Lint the codebase |
+| `format` | `prettier --write .` | Auto-format all files with Prettier |
+
+Run any script with `bun run <script>` or `npm run <script>`.
+
+---
+
+## ☁️ Deployment
+
+The project is deployed on **Vercel**: <https://careertwinai.vercel.app/>
+
+To deploy your own copy:
+
+1. Push your fork to GitHub.
+2. Import the repository on [Vercel](https://vercel.com/new).
+3. Use the default Vite/Nitro detection (build command: `bun run build` or `npm run build`).
+4. Add any required environment variables under **Project Settings → Environment Variables**.
+5. Click **Deploy**.
+
+Because the app builds through Nitro, it can also target other platforms (Netlify, Cloudflare, Node server, etc.) by configuring the appropriate Nitro preset.
+
+---
+
+## 🩺 Troubleshooting
+
+| Problem | Fix |
+|---------|-----|
+| `Unsupported engine` / Vite fails to start | Upgrade Node.js to **v20.19+** (v22 LTS recommended) |
+| `bun: command not found` | Install Bun (see Step 2) or use `npm install` instead |
+| Dependency conflicts with npm | Try `npm install --legacy-peer-deps`, or use Bun which matches the lockfile |
+| Port already in use | Stop the other process, or run `bun run dev -- --port 3001` |
+| Stale/odd build behavior | Delete `node_modules` and lockfile cache, then reinstall: `rm -rf node_modules && bun install` |
+| Lint/format errors on commit | Run `bun run format` then `bun run lint` |
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Persistent backend & database for profiles, assessments, and evidence
+- [ ] User authentication and multi-learner support
+- [ ] Support for more career paths beyond Data Analyst
+- [ ] Larger, expert-reviewed question banks per skill and prerequisite
+- [ ] Resume upload with AI-assisted skill extraction
+- [ ] Richer evidence types: projects, practical exercises, portfolio links
+- [ ] Shareable / exportable Skill Passport
+- [ ] Multilingual support (including Hindi) for wider accessibility across Madhya Pradesh
+- [ ] Educator / institution dashboards
+- [ ] Integration with real course catalogs and job portals
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature/your-feature-name`
+3. **Commit** your changes: `git commit -m "feat: add your feature"`
+4. **Format & lint:** `bun run format && bun run lint`
+5. **Push** the branch: `git push origin feature/your-feature-name`
+6. **Open** a Pull Request describing your changes
+
+Please keep changes within the existing Vite + React + TypeScript + TanStack architecture rather than migrating to another framework.
+
+---
+
+## ⚖️ Responsible Design & Limitations
+
+CareerTwin AI is a **prototype** built to demonstrate a workflow. To stay honest and trustworthy:
+
+- **"Potential Root Gap"** reflects a modeled prerequisite dependency — not proven causality.
+- **Job matching** is skill alignment only — it does **not** predict or guarantee hiring outcomes.
+- **Skill Passport** is an evidence-oriented profile — it is **not** an external certification.
+- **Core logic is deterministic**, and AI is used only to assist, with fallback behavior when AI is unavailable.
+
+---
+
+## 🙏 Acknowledgements
+
+- **MPOnline Hackathon** — *Innovate for Madhya Pradesh. Build for Viksit Bharat.*
+- [TanStack](https://tanstack.com/), [Radix UI](https://www.radix-ui.com/), [shadcn/ui](https://ui.shadcn.com/), [Tailwind CSS](https://tailwindcss.com/), [Recharts](https://recharts.org/), and [Lucide](https://lucide.dev/) for the tooling and components that made this possible.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by THE HOPE TRACERS**
+
+*If you found this project useful, consider giving it a ⭐*
+
+</div>
